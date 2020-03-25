@@ -47,6 +47,9 @@ a:active {
   color: white;
   text-decoration: underline;
 }
+figure {
+  font-family: sans-serif;
+}
 footer {
   background-color: rgb(169,235,99);
   font-family: sans-serif;
