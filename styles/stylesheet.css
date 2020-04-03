@@ -1,37 +1,44 @@
-body {
-  background-color: rgb(252,252,252);
-}
 h1 {
-  background-color: rgb(169,235,99);
-  color: white;
-  font-family: sans-serif;
+  color: rgb(240,240,240);
+  font-family: Raleway, sans-serif;
   font-style: italic;
-  padding-top: 0.1rem;
-  padding-left: 1rem;
-  padding-bottom: 0.1rem;
+  font-size: 8rem;
+  position: absolute;
+  top: -7.5rem;
+  left: -0.3rem;
+  z-index: -1;
 }
 nav {
-  font-family: sans-serif;
+  margin-top: 4rem;
 }
 h2 {
   color: rgb(30,30,30);
-  font-family: sans-serif;
+  font-family: Raleway, sans-serif;
+  font-style: normal;
+  text-transform: uppercase;
+  margin-top: 2rem;
 }
 h3 {
-  color: rgb(30,30,30);
-  font-family: sans-serif;
+  color: rgb(60,60,60);
+  font-family: Raleway, sans-serif;
+  font-style: italic;
+  text-transform: uppercase;
 }
 p {
   color: rgb(60,60,60);
-  font-family: sans-serif;
+  font-family: "Crimson Text", serif;
+  font-style: normal;
 }
 img {
   border-radius: 20px;
   margin-top: 10px;
 }
+a {
+  font-family: Raleway, sans-serif;
+  font-style: normal;
+}
 a:link {
   color: rgb(30,30,30);
-  font-weight: bold;
   text-decoration: none;
 }
 a:visited {
@@ -49,11 +56,4 @@ a:active {
 }
 figure {
   font-family: sans-serif;
-}
-footer {
-  background-color: rgb(169,235,99);
-  font-family: sans-serif;
-  padding-top: 0.1rem;
-  padding-left: 1rem;
-  padding-bottom: 0.1rem;
 }
