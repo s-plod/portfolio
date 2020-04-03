@@ -50,9 +50,9 @@ a:active {
   color: white;
   text-decoration: underline;
 }
-figure {
-  font-family: sans-serif;
-}
+
+/* FLEXBOX */
+
 .container {
   margin-top: 1rem;
   height: 28rem;
@@ -60,7 +60,7 @@ figure {
   flex-direction: column;
   flex-wrap: nowrap;
   justify-content: space-around;
-  align-items:flex-start;
+  align-items: flex-start;
 }
 .box {
   float: left;
