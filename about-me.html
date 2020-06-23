@@ -2,29 +2,111 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>About Stephen</title>
+    <title>About Me</title>
     <script src="https://kit.fontawesome.com/5b0767fefc.js" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital@0;1&family=Raleway:ital,wght@0,900;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="styles/stylesheet.css">
   </head>
   <body>
-    <header>
-      <h1>STEPHEN</h1>
-      <nav>
-        <a href="index.html">Home</a>
-        <a href="about-me.html">About Me</a>
-      </nav>
-    </header>
-    <section>
-      <h2>About Me</h2>
-      <p>My name is Stephen and I live in San Jose, California. I have a professional background in graphic design, and I'm expanding my skills in front-end web development. This is the first website I've created from scratch with multiple pages.</p>
-      <figure>
-        <img src="images/me.jpg" alt="A photo of me" width="150" height="150">
-        <figcaption>This is me as a gray avatar</figcaption>
-      </figure>
-    </section>
-    <footer>
-      <p><small><i class="fas fa-copyright"></i> All content created by Stephen P.</small></p>
-    </footer>
+    <div class="body-container">
+      <header>
+        <h1>STEPHEN</h1>
+        <nav>
+          <a href="index.html">Home</a>
+          <a href="about-me.html">About Me</a>
+        </nav>
+      </header>
+      <section>
+        <h2>About Me</h2>
+        <div class="grid-container">
+
+          <!-- ABOUT -->
+
+          <div class="grid-item-1">
+            <p>My name is Stephen and I live in San Jose, California. I have a professional background in graphic design, and I'm expanding my skills in front-end web development. This is the first website I've created from scratch with multiple pages.</p>
+            <figure>
+              <img src="images/me.jpg" alt="A photo of me" width="150" height="150">
+              <figcaption>This is me as a gray avatar</figcaption>
+            </figure>
+          </div>
+
+          <!-- FORM -->
+
+          <div class="grid-item-2" style="background-color: rgb(240,240,240);">
+            <p>Please submit the form below if you'd like to get in touch. I always respond, and I never give away your information to anyone else.</p>
+            <form method="GET">
+
+              <!-- Name and email -->
+
+              <label>Your name:
+                <input type="text" name="applicantName" style="width: 100%;">
+              </label>
+              <label>Your email address:
+                <input type="email" name="applicantEmail" style="width: 100%;">
+              </label>
+
+              <!-- Services checkboxes -->
+
+              <fieldset class="checkbox" style="margin-bottom: 0.5rem;">
+                <legend>What services are you interested in?</legend>
+                <label>Logo design and branding
+                  <input type="checkbox" name="services" value="branding">
+                  <span class="checkmark"></span>
+                </label>
+                <label>Web design
+                  <input type="checkbox" name="services" value="web">
+                  <span class="checkmark"></span>
+                </label>
+                <label>Social media design and graphics
+                  <input type="checkbox" name="services" value="graphics">
+                  <span class="checkmark"></span>
+                </label>
+                <label>Other (please explain below)
+                  <input type="checkbox" name="services" value="other">
+                  <span class="checkmark"></span>
+                </label>
+              </fieldset>
+
+              <!-- Budget -->
+
+              <label>What is the budget for your project?
+                <select name="budget" style="width: 100%; margin-top: 0.5rem;">
+                  <option value="0-100">Less than $100</option>
+                  <option value="100-1000">$100 to $1,000</option>
+                  <option value="1000+">$1,000 or more</option>
+                </select>
+              </label>
+
+              <!-- Message -->
+
+              <label>
+                <textarea name="message" rows="4">Your message...</textarea>
+              </label>
+
+              <!-- Radio buttons -->
+
+              <fieldset>
+                <legend>Would you like to subscribe to my biweekly newsletter?</legend>
+                <label>
+                  <input type="radio" name="subscribe" value="yes">
+                  Yes
+                </label>
+                <label>
+                  <input type="radio" name="subscribe" value="no">
+                  No
+                </label>
+              </fieldset>
+
+              <!-- Send button -->
+
+              <input type="submit" value="Send">
+            </form>
+          </div>
+        </div>
+      </section>
+      <footer>
+        <p style="color: #ccc;"><small><i class="fas fa-copyright"></i> All content created by Stephen P.</small></p>
+      </footer>
+    </div>
   </body>
 </html>

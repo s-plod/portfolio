@@ -1,3 +1,24 @@
+html, body { margin: 0; padding: 0; }
+
+@media (min-width: 1200px) {
+  .body-container {margin: 0 8rem 0 8rem;}
+  header img {margin: 0 0 0 8rem;}
+  header nav {margin: 0 8rem 0 auto;}
+  aside img {max-width: 12rem;}
+}
+@media (max-width: 1200px) {
+  .body-container {margin: 0 4rem 0 4rem;}
+  header img {margin: 0 0 0 4rem;}
+  header nav {margin: 0 4rem 0 auto;}
+  aside img {max-width: 9rem;}
+}
+@media (max-width: 700px) {
+  .body-container {margin: 0 1rem 0 1rem;}
+  header img {margin: 0 0 0 1rem;}
+  header nav {margin: 0 1rem 0 auto;}
+  aside img {max-width: 6rem;}
+}
+
 h1 {
   color: rgb(240,240,240);
   font-family: Raleway, sans-serif;
@@ -9,13 +30,16 @@ h1 {
   z-index: -1;
 }
 nav {
-  margin-top: 4rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  padding-top: 0.5rem;
 }
 h2 {
-  color: rgb(30,30,30);
+  color: rgb(60,60,60);
   font-family: Raleway, sans-serif;
   font-style: normal;
   text-transform: uppercase;
+  letter-spacing: 0.1em;
   margin-top: 2rem;
 }
 h3 {
@@ -24,10 +48,18 @@ h3 {
   font-style: italic;
   text-transform: uppercase;
 }
-p {
+p, figcaption {
   color: rgb(60,60,60);
   font-family: "Crimson Text", serif;
   font-style: normal;
+}
+ul {
+  color: rgb(60,60,60);
+  font-family: "Crimson Text", serif;
+  font-style: normal;
+}
+ul li:nth-child(n+5) {
+  color: rgb(160,160,160);
 }
 a {
   font-family: Raleway, sans-serif;
@@ -50,8 +82,15 @@ a:active {
   color: white;
   text-decoration: underline;
 }
+footer {
+  margin-top: 2rem;
+  transition-duration: 0.5s;
+}
+footer:hover {
+  margin-top: 1.7rem;
+}
 
-/* FLEXBOX */
+/* FLEXBOX ------------------------------------------------------------ */
 
 .container {
   margin-top: 1rem;
@@ -67,6 +106,10 @@ a:active {
   position: relative;
   height: 120px;
   width: 600px;
+  transition-duration: 0.5s;
+}
+.box:hover {
+  transform: scale(1.02);
 }
 .overlay {
   position: absolute;
@@ -84,4 +127,131 @@ div > h3 {
 div > p {
   color: white;
   margin-top: 0.3rem;
+}
+
+/* GRID ------------------------------------------------------------ */
+
+.grid-container div {
+  border-radius: 0.3rem;
+  padding: 1rem 1rem 0 1rem;
+}
+@media (min-width: 1000px) {
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1rem; }
+}
+@media (max-width: 1000px) {
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 1rem; }
+}
+.grid-container p {
+  color: rgb(60,60,60);
+  margin-top: 0;
+}
+
+/* FORM ------------------------------------------------------------ */
+
+button, input, select, textarea {
+  color: rgb(60,60,60);
+  font-family: "Crimson Text", serif;
+  font-style: normal;
+  font-size: 100%;
+  box-sizing: border-box;
+  display: block;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  margin: 0 0 1rem 0;
+}
+label {
+  color: rgb(60,60,60);
+  font-family: "Crimson Text", serif;
+  font-style: normal;
+  font-size: 100%;
+}
+textarea {
+  width: 100%;
+}
+input[type=submit] {
+  width: 100%;
+  color: white;
+  font-family: Raleway, sans-serif;
+  font-style: normal;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  padding: 0.5rem;
+  background-color: rgb(60,60,60);
+  border: 0;
+  transition-duration: 0.25s;
+}
+input[type=submit]:hover {
+  cursor: pointer;
+  transform: translateY(-0.15rem);
+}
+fieldset {
+  color: rgb(60,60,60);
+  font-family: "Crimson Text", serif;
+  font-style: normal;
+  font-size: 100%;
+  border: none;
+  margin: 1rem 0 0 -0.8rem;
+}
+fieldset input {
+  display: inline;
+}
+.checkbox input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+.checkbox label {
+  display: block;
+  position: relative;
+  padding-left: 30px;
+  margin-top: 10px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.checkmark {
+  position: absolute;
+  margin-left: 0.1rem;
+  top: 0;
+  left: 0;
+  height: 20px;
+  width: 20px;
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+.checkbox label:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+.checkbox input:checked ~ .checkmark {
+  background-color: rgb(60,60,60);
+}
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+.checkmark:after {
+  display: block;
+}
+.checkbox input:checked ~ .checkmark:after {
+  left: 6px;
+  top: 2px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
 }
